@@ -39,8 +39,8 @@
 
     </head>
     <body>
-        <header>
-    <nav class="nav has-shadow">
+        <header role="banner">
+    <nav class="nav has-shadow" role="navigation">
         <div class="container">
             <div class="nav-left">
                 <a class="nav-item is-logo" href="/">Hans Ott</a>
@@ -59,24 +59,24 @@
                 
             </div>
             <div class="nav-right">
-                <a class="nav-item" href="https://github.com/hansott" target="_blank">
+                <a class="nav-item" href="https://github.com/hansott" target="_blank" title="View Hans Ott on GitHub">
                     <span class="icon">
-                        <i class="fa fa-github"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://www.linkedin.com/in/otthans" target="_blank">
+                <a class="nav-item" href="https://www.linkedin.com/in/otthans" target="_blank" title="View Hans Ott on LinkedIn">
                     <span class="icon">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://stackoverflow.com/users/3455472" target="_blank">
+                <a class="nav-item" href="https://stackoverflow.com/users/3455472" target="_blank" title="View Hans Ott on Stackoverflow">
                     <span class="icon">
-                        <i class="fa fa-stack-overflow"></i>
+                        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://twitter.com/otthans" target="_blank">
+                <a class="nav-item" href="https://twitter.com/otthans" target="_blank" title="View Hans Ott on Twitter">
                     <span class="icon">
-                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
                     </span>
                 </a>
             </div>
@@ -104,16 +104,19 @@
     </nav>
 </header>
 
-        
-        <div class="container">
-            <div class="main">
-                
+        <div role="main">
+            
+            <div class="container">
+                <div class="main">
+                    
     <h1 class="title is-1">404 - Page not found</h1>
     <h2 class="subtitle">¯\_(ツ)_/¯ The content you're looking for doesn't seem to exist.</h2>
 
+                </div>
             </div>
+            
         </div>
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="content has-text-centered">
             <p>

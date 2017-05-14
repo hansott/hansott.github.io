@@ -64,8 +64,8 @@ The registration controller:
 
     </head>
     <body>
-        <header>
-    <nav class="nav has-shadow">
+        <header role="banner">
+    <nav class="nav has-shadow" role="navigation">
         <div class="container">
             <div class="nav-left">
                 <a class="nav-item is-logo" href="/">Hans Ott</a>
@@ -84,24 +84,24 @@ The registration controller:
                 
             </div>
             <div class="nav-right">
-                <a class="nav-item" href="https://github.com/hansott" target="_blank">
+                <a class="nav-item" href="https://github.com/hansott" target="_blank" title="View Hans Ott on GitHub">
                     <span class="icon">
-                        <i class="fa fa-github"></i>
+                        <i class="fa fa-github" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://www.linkedin.com/in/otthans" target="_blank">
+                <a class="nav-item" href="https://www.linkedin.com/in/otthans" target="_blank" title="View Hans Ott on LinkedIn">
                     <span class="icon">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://stackoverflow.com/users/3455472" target="_blank">
+                <a class="nav-item" href="https://stackoverflow.com/users/3455472" target="_blank" title="View Hans Ott on Stackoverflow">
                     <span class="icon">
-                        <i class="fa fa-stack-overflow"></i>
+                        <i class="fa fa-stack-overflow" aria-hidden="true"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="https://twitter.com/otthans" target="_blank">
+                <a class="nav-item" href="https://twitter.com/otthans" target="_blank" title="View Hans Ott on Twitter">
                     <span class="icon">
-                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
                     </span>
                 </a>
             </div>
@@ -129,14 +129,15 @@ The registration controller:
     </nav>
 </header>
 
-        
-    <article class="post">
-        <div class="hero is-primary is-bold">
+        <div role="main">
+            
+    <article class="post" role="article" itemid="https://hansott.github.io/post/programmatically-login-user-with-symfony-security-in-silex/" itemscope itemtype="https://schema.org/BlogPosting">
+        <header class="hero is-primary is-bold">
             <div class="hero-body">
                 <div class="container">
-                    <h1 class="title">Programmatically login user with symfony/security in Silex</h1>
+                    <h1 class="title" itemprop="name">Programmatically login user with symfony/security in Silex</h1>
                     <h2 class="subtitle">
-                        <time datetime="2016-05-02T20:40:00&#43;02:00">
+                        <time itemprop="datePublished" datetime="2016-05-02">
                         May 2, 2016
                         </time> · 2 min read
                     </h2>
@@ -161,12 +162,12 @@ The registration controller:
                     
                 </div>
             </div>
-        </div>
+        </header>
 
-        <div class="container">
-            <div class="main">
-                
-        <div class="content">
+            <div class="container">
+                <div class="main">
+                    
+        <div class="content" itemprop="articleBody">
             <p>Last night I was experimenting with Silex and I needed a register/login form. Silex comes with a <code>SecurityServiceProvider</code> which gives you the power of the symfony/security component. But I couldn&rsquo;t figure out how to programmatically login the user after registration. So here&rsquo;s my solution:</p>
 
 <p>The registration controller:</p>
@@ -251,13 +252,13 @@ The registration controller:
             <p style="margin-bottom: 1em;">
                 <a class="button is-twitter js-share-button" href="https://twitter.com/intent/tweet?text=Programmatically%20login%20user%20with%20symfony%2fsecurity%20in%20Silex&url=https%3a%2f%2fhansott.github.io%2fpost%2fprogrammatically-login-user-with-symfony-security-in-silex%2f&via=otthans" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
                     </span>
                     <span>Tweet</span>
                 </a>
                 <a class="button is-facebook js-share-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhansott.github.io%2fpost%2fprogrammatically-login-user-with-symfony-security-in-silex%2f" target="_blank">
                     <span class="icon">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
                     </span>
                     <span>Share</span>
                 </a>
@@ -284,25 +285,28 @@ The registration controller:
     
     
     
-        <li>
+        <li itemid="/post/a-simple-declarative-and-composable-way-to-fetch-data-for-react-components/" itemscope itemtype="https://schema.org/BlogPosting">
             <p style="margin-bottom: 1em;">
-                <a href="/post/a-simple-declarative-and-composable-way-to-fetch-data-for-react-components/">A simple, declarative, and composable way to fetch data for React components</a>
+                <a href="/post/a-simple-declarative-and-composable-way-to-fetch-data-for-react-components/" itemprop="name">A simple, declarative, and composable way to fetch data for React components</a>
             </p>
         </li>
     
-        <li>
+        <li itemid="/post/add-homestead-mysql-as-data-source-in-phpstorm/" itemscope itemtype="https://schema.org/BlogPosting">
             <p style="margin-bottom: 1em;">
-                <a href="/post/add-homestead-mysql-as-data-source-in-phpstorm/">Add homestead MySQL as data source in PHPStorm</a>
+                <a href="/post/add-homestead-mysql-as-data-source-in-phpstorm/" itemprop="name">Add homestead MySQL as data source in PHPStorm</a>
             </p>
         </li>
     
 </ul>
 
+
+                </div>
+            </div>
+            
     </article>
 
-            </div>
         </div>
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
     <div class="container">
         <div class="content has-text-centered">
             <p>
