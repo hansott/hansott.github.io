@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Add homestead MySQL as data source in PHPStorm</title>
+      <title>Add homestead MySQL as data source in PhpStorm</title>
       <link>https://hansott.github.io/post/add-homestead-mysql-as-data-source-in-phpstorm/</link>
       <pubDate>Sun, 13 Mar 2016 11:34:28 +0200</pubDate>
       
       <guid>https://hansott.github.io/post/add-homestead-mysql-as-data-source-in-phpstorm/</guid>
-      <description>To be able to work with your databases in PHPStorm, you should define them as data sources. Data sources provide the basis for SQL coding assistance and code validation.
+      <description>To be able to work with your databases in PhpStorm, you should define them as data sources. Data sources provide the basis for SQL coding assistance and code validation.
  Laravel Homestead is an official, pre-packaged Vagrant box that provides you a wonderful development environment without requiring you to install PHP, HHVM, a web server, and any other server software on your local machine.
  Select View | Tool Windows | Database, click on the + button and choose Data Source | MySQL:</description>
     </item>
