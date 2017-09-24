@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hansott.github.io/post/5-simple-rules-for-simpler-code/</loc>
+    <lastmod>2017-08-21T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hansott.github.io/post/building-a-sliding-window-rate-limiter-with-redis/</loc>
+    <lastmod>2017-06-02T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hansott.github.io/post/programmatically-login-user-with-symfony-security-in-silex/</loc>
     <lastmod>2016-05-02T20:40:00+02:00</lastmod>
   </url>
@@ -23,7 +33,7 @@
   
   <url>
     <loc>https://hansott.github.io/</loc>
-    <lastmod>2016-05-02T20:40:00+02:00</lastmod>
+    <lastmod>2017-08-21T09:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -47,7 +57,7 @@
   
   <url>
     <loc>https://hansott.github.io/tags/php/</loc>
-    <lastmod>2016-05-02T20:40:00+02:00</lastmod>
+    <lastmod>2017-08-21T09:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,7 +73,7 @@
   
   <url>
     <loc>https://hansott.github.io/post/</loc>
-    <lastmod>2016-05-02T20:40:00+02:00</lastmod>
+    <lastmod>2017-08-21T09:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -75,6 +85,12 @@
   
   <url>
     <loc>https://hansott.github.io/reading-list/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hansott.github.io/tags/redis/</loc>
+    <lastmod>2017-06-02T09:00:00+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>

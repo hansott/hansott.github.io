@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on Hans Ott</title>
+    <link>https://hansott.github.io/tags/redis/</link>
+    <description>Recent content in Redis on Hans Ott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Jun 2017 09:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://hansott.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Building a sliding window rate limiter with Redis</title>
+      <link>https://hansott.github.io/post/building-a-sliding-window-rate-limiter-with-redis/</link>
+      <pubDate>Fri, 02 Jun 2017 09:00:00 +0200</pubDate>
+      
+      <guid>https://hansott.github.io/post/building-a-sliding-window-rate-limiter-with-redis/</guid>
+      <description>I wrote a blogpost on our company blog about building a sliding rate limiter with Redis. Let me know what you think!
+ For our Instagram crawler we needed a system to keep track of the amount of API calls we did to prevent us from hitting the rate limits. We could of course perform our HTTP requests without checking rate limits upfront, and wait until we get a 429 OAuthRateLimitException from Instagram, but that would exhaust our tokens and block us from talking efficiently to their API.</description>
+    </item>
+    
+  </channel>
+</rss>

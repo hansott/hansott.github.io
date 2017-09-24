@@ -6,10 +6,32 @@
     <description>Recent content in Posts on Hans Ott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 May 2016 20:40:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 21 Aug 2017 09:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://hansott.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>5 simple rules for simpler code</title>
+      <link>https://hansott.github.io/post/5-simple-rules-for-simpler-code/</link>
+      <pubDate>Mon, 21 Aug 2017 09:00:00 +0200</pubDate>
+      
+      <guid>https://hansott.github.io/post/5-simple-rules-for-simpler-code/</guid>
+      <description>I wrote a blogpost on our company blog about simple code. Let me know what you think!
+ We as developers care about simple code. Simple code makes it easier to read and debug code which will allow you to build new features and fix bugs faster.
+https://engagor.github.io/blog/2017/08/21/simple-rules-for-simpler-code/
+ </description>
+    </item>
+    
+    <item>
+      <title>Building a sliding window rate limiter with Redis</title>
+      <link>https://hansott.github.io/post/building-a-sliding-window-rate-limiter-with-redis/</link>
+      <pubDate>Fri, 02 Jun 2017 09:00:00 +0200</pubDate>
+      
+      <guid>https://hansott.github.io/post/building-a-sliding-window-rate-limiter-with-redis/</guid>
+      <description>I wrote a blogpost on our company blog about building a sliding rate limiter with Redis. Let me know what you think!
+ For our Instagram crawler we needed a system to keep track of the amount of API calls we did to prevent us from hitting the rate limits. We could of course perform our HTTP requests without checking rate limits upfront, and wait until we get a 429 OAuthRateLimitException from Instagram, but that would exhaust our tokens and block us from talking efficiently to their API.</description>
+    </item>
     
     <item>
       <title>Programmatically login user with symfony/security in Silex</title>

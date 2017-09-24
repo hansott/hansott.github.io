@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MySql on Hans Ott</title>
+    <title>MySQL on Hans Ott</title>
     <link>https://hansott.github.io/tags/mysql/</link>
-    <description>Recent content in MySql on Hans Ott</description>
+    <description>Recent content in MySQL on Hans Ott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 13 Mar 2016 11:34:28 +0200</lastBuildDate>
