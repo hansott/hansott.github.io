@@ -6,10 +6,21 @@
     <description>Recent content on Hans Ott</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Oct 2017 14:38:51 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2017 10:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://hansott.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parse Your Way Through Errors</title>
+      <link>https://hansott.github.io/post/parse-your-way-through-errors/</link>
+      <pubDate>Fri, 01 Dec 2017 10:00:00 +0100</pubDate>
+      
+      <guid>https://hansott.github.io/post/parse-your-way-through-errors/</guid>
+      <description>I wrote a blogpost on our company blog about using Nikita&amp;rsquo;s PHP Parser:
+ https://engagor.github.io/blog/2017/12/01/parse-your-way-through-errors/
+ </description>
+    </item>
     
     <item>
       <title>A Five Minutes Guide to Better Typography</title>
