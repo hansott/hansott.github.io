@@ -11,13 +11,14 @@
 <meta property="og:title" content="Programmatically Login User With symfony/security in Silex" />
 <meta property="og:description" content="Last night I was experimenting with Silex and I needed a register/login form. Silex comes with a SecurityServiceProvider which gives you the power of the symfony/security component. But I couldn&rsquo;t figure out how to programmatically login the user after registration. So here&rsquo;s my solution:
 The registration controller:
-&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ... public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic." />
+&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ...  public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hansott.github.io/post/programmatically-login-user-with-symfony-security-in-silex/" />
 
 
 
 <meta property="article:published_time" content="2016-05-02T20:40:00&#43;02:00"/>
+
 <meta property="article:modified_time" content="2016-05-02T20:40:00&#43;02:00"/>
 
 
@@ -35,9 +36,10 @@ The registration controller:
 <meta itemprop="name" content="Programmatically Login User With symfony/security in Silex">
 <meta itemprop="description" content="Last night I was experimenting with Silex and I needed a register/login form. Silex comes with a SecurityServiceProvider which gives you the power of the symfony/security component. But I couldn&rsquo;t figure out how to programmatically login the user after registration. So here&rsquo;s my solution:
 The registration controller:
-&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ... public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic.">
+&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ...  public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic.">
 
 
+<meta itemprop="datePublished" content="2016-05-02T20:40:00&#43;02:00" />
 <meta itemprop="dateModified" content="2016-05-02T20:40:00&#43;02:00" />
 <meta itemprop="wordCount" content="216">
 
@@ -45,10 +47,11 @@ The registration controller:
 
 <meta itemprop="keywords" content="PHP,Silex,Symfony," />
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Programmatically Login User With symfony/security in Silex"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Programmatically Login User With symfony/security in Silex"/>
 <meta name="twitter:description" content="Last night I was experimenting with Silex and I needed a register/login form. Silex comes with a SecurityServiceProvider which gives you the power of the symfony/security component. But I couldn&rsquo;t figure out how to programmatically login the user after registration. So here&rsquo;s my solution:
 The registration controller:
-&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ... public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic."/>
+&lt;?php use Silex\Application; use Symfony\Component\HttpFoundation\Request; final class RegistrationController { // ...  public function register(Request $request, Application $app) { $email = $request-&gt;get(&#39;email&#39;); $password = $request-&gt;get(&#39;password&#39;); // validation logic."/>
 
 <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
@@ -163,80 +166,78 @@ The registration controller:
             <p>Last night I was experimenting with Silex and I needed a register/login form. Silex comes with a <code>SecurityServiceProvider</code> which gives you the power of the symfony/security component. But I couldn&rsquo;t figure out how to programmatically login the user after registration. So here&rsquo;s my solution:</p>
 
 <p>The registration controller:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #633820">&lt;?php</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#633820">&lt;?php</span>
 
-<span style="color: #A90D91">use</span> <span style="color: #000000">Silex\Application</span>;
-<span style="color: #A90D91">use</span> <span style="color: #000000">Symfony\Component\HttpFoundation\Request</span>;
+<span style="color:#a90d91">use</span> <span style="color:#000">Silex\Application</span>;
+<span style="color:#a90d91">use</span> <span style="color:#000">Symfony\Component\HttpFoundation\Request</span>;
 
-<span style="color: #A90D91">final</span> <span style="color: #A90D91">class</span> <span style="color: #3F6E75">RegistrationController</span>
+<span style="color:#a90d91">final</span> <span style="color:#a90d91">class</span> <span style="color:#3f6e75">RegistrationController</span>
 {
-    <span style="color: #177500">// ...</span>
-
-    <span style="color: #A90D91">public</span> <span style="color: #A90D91">function</span> <span style="color: #000000">register</span>(<span style="color: #000000">Request</span> <span style="color: #000000">$request</span>, <span style="color: #000000">Application</span> <span style="color: #000000">$app</span>)
+    <span style="color:#177500">// ...
+</span><span style="color:#177500"></span>
+    <span style="color:#a90d91">public</span> <span style="color:#a90d91">function</span> <span style="color:#000">register</span>(<span style="color:#000">Request</span> <span style="color:#000">$request</span>, <span style="color:#000">Application</span> <span style="color:#000">$app</span>)
     {
-        <span style="color: #000000">$email</span> <span style="color: #000000">=</span> <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">get</span>(<span style="color: #C41A16">&#39;email&#39;</span>);
-        <span style="color: #000000">$password</span> <span style="color: #000000">=</span> <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">get</span>(<span style="color: #C41A16">&#39;password&#39;</span>);
+        <span style="color:#000">$email</span> <span style="color:#000">=</span> <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">get</span>(<span style="color:#c41a16">&#39;email&#39;</span>);
+        <span style="color:#000">$password</span> <span style="color:#000">=</span> <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">get</span>(<span style="color:#c41a16">&#39;password&#39;</span>);
 
-        <span style="color: #177500">// validation logic.</span>
-        <span style="color: #177500">// ...</span>
+        <span style="color:#177500">// validation logic.
+</span><span style="color:#177500"></span>        <span style="color:#177500">// ...
+</span><span style="color:#177500"></span>
+        <span style="color:#177500">// Persist the user in your database.
+</span><span style="color:#177500"></span>        <span style="color:#000">$this</span><span style="color:#000">-&gt;</span><span style="color:#836c28">registrationService</span><span style="color:#000">-&gt;</span><span style="color:#836c28">register</span>(<span style="color:#000">$email</span>, <span style="color:#000">$password</span>);
 
-        <span style="color: #177500">// Persist the user in your database.</span>
-        <span style="color: #000000">$this-&gt;</span><span style="color: #836C28">registrationService</span><span style="color: #000000">-&gt;</span><span style="color: #836C28">register</span>(<span style="color: #000000">$email</span>, <span style="color: #000000">$password</span>);
-
-        <span style="color: #000000">$credentials</span> <span style="color: #000000">=</span> [
-            <span style="color: #C41A16">&#39;_csrf_token&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;generate-a-csrf-token&#39;</span>,
-            <span style="color: #C41A16">&#39;_username&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #000000">$email</span>,
-            <span style="color: #C41A16">&#39;_password&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #000000">$password</span>,
+        <span style="color:#000">$credentials</span> <span style="color:#000">=</span> [
+            <span style="color:#c41a16">&#39;_csrf_token&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;generate-a-csrf-token&#39;</span>,
+            <span style="color:#c41a16">&#39;_username&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#000">$email</span>,
+            <span style="color:#c41a16">&#39;_password&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#000">$password</span>,
         ];
 
-        <span style="color: #177500">// Create a uri to the login authentication route.</span>
-        <span style="color: #000000">$uri</span> <span style="color: #000000">=</span> <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">getUriForPath</span>(<span style="color: #C41A16">&#39;/login/check&#39;</span>);
+        <span style="color:#177500">// Create a uri to the login authentication route.
+</span><span style="color:#177500"></span>        <span style="color:#000">$uri</span> <span style="color:#000">=</span> <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">getUriForPath</span>(<span style="color:#c41a16">&#39;/login/check&#39;</span>);
 
-        <span style="color: #177500">// Create a sub request which pretends to be a user login request.</span>
-        <span style="color: #000000">$loginRequest</span> <span style="color: #000000">=</span> <span style="color: #000000">Request::</span><span style="color: #836C28">create</span>(
-            <span style="color: #000000">$uri</span>,
-            <span style="color: #C41A16">&#39;POST&#39;</span>,
-            <span style="color: #000000">$credentials</span>,
-            <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">cookies</span><span style="color: #000000">-&gt;</span><span style="color: #836C28">all</span>(),
-            <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">files</span><span style="color: #000000">-&gt;</span><span style="color: #836C28">all</span>(),
-            <span style="color: #000000">$request-&gt;</span><span style="color: #836C28">server</span><span style="color: #000000">-&gt;</span><span style="color: #836C28">all</span>()
+        <span style="color:#177500">// Create a sub request which pretends to be a user login request.
+</span><span style="color:#177500"></span>        <span style="color:#000">$loginRequest</span> <span style="color:#000">=</span> <span style="color:#000">Request</span><span style="color:#000">::</span><span style="color:#836c28">create</span>(
+            <span style="color:#000">$uri</span>,
+            <span style="color:#c41a16">&#39;POST&#39;</span>,
+            <span style="color:#000">$credentials</span>,
+            <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">cookies</span><span style="color:#000">-&gt;</span><span style="color:#836c28">all</span>(),
+            <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">files</span><span style="color:#000">-&gt;</span><span style="color:#836c28">all</span>(),
+            <span style="color:#000">$request</span><span style="color:#000">-&gt;</span><span style="color:#836c28">server</span><span style="color:#000">-&gt;</span><span style="color:#836c28">all</span>()
         );
 
-        <span style="color: #177500">// Let our application handle the login request.</span>
-        <span style="color: #A90D91">return</span> <span style="color: #000000">$app-&gt;</span><span style="color: #836C28">handle</span>(<span style="color: #000000">$loginRequest</span>);
+        <span style="color:#177500">// Let our application handle the login request.
+</span><span style="color:#177500"></span>        <span style="color:#a90d91">return</span> <span style="color:#000">$app</span><span style="color:#000">-&gt;</span><span style="color:#836c28">handle</span>(<span style="color:#000">$loginRequest</span>);
     }
 }
-</pre></div>
-
+</code></pre></div>
 <p>The configuration for the security provider:</p>
-<div class="highlight" style="background: #ffffff"><pre style="line-height: 125%"><span></span><span style="color: #633820">&lt;?php</span>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#633820">&lt;?php</span>
 
-<span style="color: #000000">$app-&gt;</span><span style="color: #836C28">register</span>(<span style="color: #A90D91">new</span> <span style="color: #000000">SecurityServiceProvider</span>(), <span style="color: #A90D91">array</span>(
-    <span style="color: #C41A16">&#39;security.firewalls&#39;</span> <span style="color: #000000">=&gt;</span> [
-        <span style="color: #C41A16">&#39;login&#39;</span> <span style="color: #000000">=&gt;</span> [
-            <span style="color: #C41A16">&#39;pattern&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;^/login$&#39;</span>,
+<span style="color:#000">$app</span><span style="color:#000">-&gt;</span><span style="color:#836c28">register</span>(<span style="color:#a90d91">new</span> <span style="color:#000">SecurityServiceProvider</span>(), <span style="color:#a90d91">array</span>(
+    <span style="color:#c41a16">&#39;security.firewalls&#39;</span> <span style="color:#000">=&gt;</span> [
+        <span style="color:#c41a16">&#39;login&#39;</span> <span style="color:#000">=&gt;</span> [
+            <span style="color:#c41a16">&#39;pattern&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;^/login$&#39;</span>,
         ],
-        <span style="color: #C41A16">&#39;register&#39;</span> <span style="color: #000000">=&gt;</span> [
-            <span style="color: #C41A16">&#39;pattern&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;^/register$&#39;</span>,
+        <span style="color:#c41a16">&#39;register&#39;</span> <span style="color:#000">=&gt;</span> [
+            <span style="color:#c41a16">&#39;pattern&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;^/register$&#39;</span>,
         ],
-        <span style="color: #C41A16">&#39;app&#39;</span> <span style="color: #000000">=&gt;</span> [
-            <span style="color: #C41A16">&#39;pattern&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;^/&#39;</span>,
-            <span style="color: #C41A16">&#39;form&#39;</span> <span style="color: #000000">=&gt;</span> [
-                <span style="color: #C41A16">&#39;login_path&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;/login&#39;</span>,
-                <span style="color: #C41A16">&#39;check_path&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;/login/check&#39;</span>,
+        <span style="color:#c41a16">&#39;app&#39;</span> <span style="color:#000">=&gt;</span> [
+            <span style="color:#c41a16">&#39;pattern&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;^/&#39;</span>,
+            <span style="color:#c41a16">&#39;form&#39;</span> <span style="color:#000">=&gt;</span> [
+                <span style="color:#c41a16">&#39;login_path&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;/login&#39;</span>,
+                <span style="color:#c41a16">&#39;check_path&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;/login/check&#39;</span>,
             ],
-            <span style="color: #C41A16">&#39;logout&#39;</span> <span style="color: #000000">=&gt;</span> [
-                <span style="color: #C41A16">&#39;logout_path&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #C41A16">&#39;/logout&#39;</span>,
-                <span style="color: #C41A16">&#39;invalidate_session&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #A90D91">true</span>,
+            <span style="color:#c41a16">&#39;logout&#39;</span> <span style="color:#000">=&gt;</span> [
+                <span style="color:#c41a16">&#39;logout_path&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#c41a16">&#39;/logout&#39;</span>,
+                <span style="color:#c41a16">&#39;invalidate_session&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#a90d91">true</span>,
             ],
-            <span style="color: #C41A16">&#39;users&#39;</span> <span style="color: #000000">=&gt;</span> <span style="color: #000000">$app-&gt;</span><span style="color: #836C28">share</span>(<span style="color: #A90D91">function</span> () <span style="color: #A90D91">use</span> (<span style="color: #000000">$app</span>) {
-                <span style="color: #A90D91">return</span> <span style="color: #A90D91">new</span> <span style="color: #000000">UserProvider</span>(<span style="color: #000000">$app</span>[<span style="color: #C41A16">&#39;UserRepository&#39;</span>]);
+            <span style="color:#c41a16">&#39;users&#39;</span> <span style="color:#000">=&gt;</span> <span style="color:#000">$app</span><span style="color:#000">-&gt;</span><span style="color:#836c28">share</span>(<span style="color:#a90d91">function</span> () <span style="color:#a90d91">use</span> (<span style="color:#000">$app</span>) {
+                <span style="color:#a90d91">return</span> <span style="color:#a90d91">new</span> <span style="color:#000">UserProvider</span>(<span style="color:#000">$app</span>[<span style="color:#c41a16">&#39;UserRepository&#39;</span>]);
             }),
         ],
     ],
 ));
-</pre></div>
-
+</code></pre></div>
 <p>That&rsquo;s it! Happy coding!</p>
 
             <p>
