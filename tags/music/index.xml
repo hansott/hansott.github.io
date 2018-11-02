@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Hans Ott</title>
+    <link>https://hansott.github.io/tags/music/</link>
+    <description>Recent content in Music on Hans Ott</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Jul 2018 18:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://hansott.github.io/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wear Sunscreen.</title>
+      <link>https://hansott.github.io/post/wear-suncreen/</link>
+      <pubDate>Mon, 16 Jul 2018 18:00:00 +0200</pubDate>
+      
+      <guid>https://hansott.github.io/post/wear-suncreen/</guid>
+      <description>Yo
+ </description>
+    </item>
+    
+  </channel>
+</rss>
